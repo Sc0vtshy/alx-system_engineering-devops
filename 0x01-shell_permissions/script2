@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Input file name:"
+read filename
+
+echo "Enter command:"
+read userinput
+
+echo "#!/bin/bash" > "$filename"
+echo "$userinput" >> "$filename"
+
+chmod +x "$filename"
+
+echo "Input commit message:"
+read commitmsg
+
+git add "$filename"
+git commit -m "$commitmsg"
+git push
+
