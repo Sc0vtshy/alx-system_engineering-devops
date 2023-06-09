@@ -7,7 +7,7 @@ echo "enter command"
 read userinput
 
 echo "#!/bin/bash" > ${filename}
-echo ${userinput} > ${filename}
+echo " ${userinput}"  > ${filename}
 
 chmod +x ${filename}
 
