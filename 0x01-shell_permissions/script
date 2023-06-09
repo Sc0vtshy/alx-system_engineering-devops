@@ -3,6 +3,20 @@
 echo "input file name"
 read filename
 
-echo "#!/bin/bash" > ${filename}
+echo "enter command"
+read userinput
 
-chomd +x ${filename}
+echo "#!/bin/bash" > ${filename}
+ehco ${userinput} > ${filename}
+
+chmod +x ${filename}
+
+echo "input commit message"
+read var
+echo "${var}" 
+
+
+
+git add .
+git commit -m "${var}"
+git push
